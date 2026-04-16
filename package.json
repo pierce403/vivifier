@@ -1,0 +1,38 @@
+{
+  "name": "vivifier",
+  "version": "0.1.0",
+  "description": "Turn a git repository into a Pinata-deployable maintainer agent with XMTP, Farcaster, and GitHub workflows.",
+  "type": "module",
+  "bin": {
+    "vivifier": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "test": "node --test --import tsx test/**/*.test.ts",
+    "check": "npm run build && npm run test"
+  },
+  "keywords": [
+    "pinata",
+    "xmtp",
+    "farcaster",
+    "github",
+    "agents"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "commander": "^14.0.3",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}
